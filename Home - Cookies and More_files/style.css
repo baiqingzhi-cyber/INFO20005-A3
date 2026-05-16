@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary: #8b5e3c;
+    --bg: #fff7ed;
+    --text: #2b1d14;
+    --accent: #f4a261;
+    --card: #fdebd3;
+    --font-main: "system-ui", sans-serif;
+}
+
+h1{
+    font-family: var(--font-main);
+    font-size: 52px;
+}
+
+h2{
+    font-family: var(--font-main);
+    font-size: 36px;
+}
+
+h3{
+    font-family: var(--font-main);
+    font-size: 24px;
+}
+
+p{
+    font-family: var(--font-main);
+    font-size: 18px;
+}
+
+header{
+    background-color: var(--primary);
+    padding: 0px 32px;
+    height: 120px;
+    width: 100%;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover{
+    text-decoration: underline;
+}
+
+header li {
+    display: inline;
+    margin-right: 4vw;
+}
+
+header ul{
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 120px;
+}
+
+header h1{
+    color: white;
+    position: absolute;
+    left: 80px;
+    top: 0;
+    line-height: 120px;
+}
+
+.hero{
+    background-image: url(image/cookies_home.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 80vh;
+    padding: 4vh 4vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 32px;
+}
+
+.button a{
+    background-color: var(--card);
+    color: var(--text);
+    text-decoration: none;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    padding: 10px;
+}

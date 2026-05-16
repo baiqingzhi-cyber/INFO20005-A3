@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -70,7 +71,11 @@
 
     <div class="product-list">
 
-        <article class="product-card">
+        <article class="product-card"
+        data-desc="Crispy edges with a soft matcha center and white chocolate chunks."
+        data-allergens="Contains gluten, dairy, eggs. May contain traces of nuts."
+        data-storage="Up to 5 days at room temperature"
+        >
             <div class="product-img">
                 <img src="image/matcha white choco cookie.jpeg" alt="matcha white choco cookie" />
             </div>
@@ -85,7 +90,11 @@
             </div>              
         </article>
 
-        <article class="product-card">
+        <article class="product-card"
+        data-desc="Fluffy brioche glazed with honey butter, lightly sweet and rich."
+        data-allergens="Contains wheat (gluten), dairy (milk), eggs. May contain traces of soy and nuts."
+        data-storage="Best enjoyed fresh. Up to 2 days at room temperature."
+        >
             <div class="product-img">
                 <img src="image/honey butter brioche.jpg" alt="honey butter brioche" />
             </div>
@@ -100,7 +109,11 @@
             </div>              
         </article>
 
-        <article class="product-card">
+        <article class="product-card"
+        data-desc="Fresh strawberries layered with vanilla cream and soft sponge cake."
+        data-allergens="Contains wheat (gluten), dairy (milk), eggs. May contain traces of nuts."
+        data-storage="Keep refrigerated at 0-4°C. Consume within 2 days."
+        >
             <div class="product-img">
                 <img src="image/strawberry shortcake.png" alt="strawberry shortcake" />
             </div>
@@ -115,7 +128,11 @@
             </div>              
         </article>
 
-        <article class="product-card">
+        <article class="product-card"
+        data-desc="Warm apple filling with cinnamon and a crunchy crumble topping."
+        data-allergens="Contains wheat (gluten), dairy (milk), eggs. May contain traces of nuts."
+        data-storage="Store at room temperature for up to 1 day. Refrigerate up to 4 days."
+        >
             <div class="product-img">
                 <img src="image/apple cinnamon crumble pie.jpg" alt="apple cinnamon crumble pie" />
             </div>
@@ -143,7 +160,11 @@
     
     <div class="product-list">
 
-        <article class="product-card">
+        <article class="product-card"
+        data-desc="Soft-baked cookie loaded with rich chocolate chips."
+        data-allergens="Contains wheat (gluten), dairy (milk), eggs, soy. May contain traces of nuts."
+        data-storage="Up to 4 days at room temperature."
+        >
             <div class="product-img">
                 <img src="image/choc chip cookie.jpg" alt="classic choc chip cookie" />
             </div>
@@ -158,7 +179,11 @@
             </div>              
         </article>
 
-        <article class="product-card">
+        <article class="product-card"
+        data-desc="Slow-fermented sourdough with a crispy crust and chewy inside."
+        data-allergens="Contains wheat (gluten). May contain traces of dairy or nuts."
+        data-storage="Up to 3 days at room temperature."
+        >
             <div class="product-img">
                 <img src="image/sourdough 1.png" alt="sourdough loaf" />
             </div>
@@ -173,7 +198,11 @@
             </div>              
         </article>
 
-        <article class="product-card">
+        <article class="product-card"
+        data-desc="Creamy cheesecake with a caramelized top and smooth center."
+        data-allergens="Contains dairy (milk), eggs. May contain traces of wheat (gluten)."
+        data-storage="Keep refrigerated at 0-4°C. Consume within 3 days."
+        >
             <div class="product-img">
                 <img src="image/basque cake.jpg" alt="basque cake" />
             </div>
@@ -188,7 +217,11 @@
             </div>              
         </article>
 
-        <article class="product-card">
+        <article class="product-card"
+        data-desc="A classic Aussie biscuit made with rolled oats, coconut, and golden syrup, baked until perfectly crisp and chewy."
+        data-allergens="Contains wheat (gluten), oats, dairy (butter). May contain traces of nuts and soy."
+        data-storage="Up to 7 days at room temperature."
+        >
             <div class="product-img">
                 <img src="image/anzac biscuit.jpg" alt="anzac biscuit" />
             </div>
@@ -222,6 +255,42 @@
 
     </section>
     </footer>
+
+    <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+
+        <button class="modal-close" id="modalCloseBtn">✕</button>
+
+        <div class="modal-left">
+            <img id="modalImg" src="" alt="">
+        </div>
+
+        <div class="modal-right">
+            <h2 id="modalTitle"></h2>
+
+            <p class="modal-price">
+                <span id="modalPrice"></span>
+                <span class="modal-weight"> / <span id="modalWeight"></span></span>
+            </p>
+
+            <p class="modal-desc" id="modalDesc"></p>
+
+            <div class="modal-section">
+                <h3>Allergens</h3>
+                <p id="modalAllergens"></p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Storage</h3>
+                <p id="modalStorage"></p>
+            </div>
+
+            <button class="add-btn">Add to cart</button>
+        </div>
+
+    </div>
+    </div>
+
 
 </body>
 </html>
