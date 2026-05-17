@@ -71,3 +71,48 @@ document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeModal();
 });
 
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function updateCartCount() {
+    const cartCount = document.getElementById("cartCount");
+    if (!cartCount) return;
+
+    const totelItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartCount.textContent = totelItems;
+}
+
+updateCartCount();
+
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function addToCart(card) {
+    const title = card.querySelector(".product-name").textContent;
+    const price = parseFloat(card.querySelector(".price").textContent.replace("$",""));
+    const weight = card.querySelector(".spec").textContent;
+    const img = card.querySelector("img").src;
+
+    const existing = cart.find(item => item.title === title);
+
+    if (existing) {
+        existing.quantity += 1;
+    } else {
+        cart.push({
+            title, price, weight, img, quantity: 1
+        });
+    }
+
+    saveCart();
+    updateCartCount();
+}
+
+document.addEventListener("click", (e) => {
+  const addBtn = e.target.closest(".add-btn");
+
+  if (addBtn) {
+    e.stopPropagation();
+    const card = addBtn.closest(".product-card");
+    addToCart(card);
+  }
+});
