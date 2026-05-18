@@ -9,6 +9,11 @@ const deliveryMethod = document.getElementById("deliveryMethod");
 const addressInput = document.getElementById("addressInput");
 const pickupTimeInput = document.getElementById("pickupTimeInput");
 
+const checkoutBtn = document.querySelector(".checkout-btn");
+const nameInput = document.getElementById("nameInput");
+const phoneInput = document.getElementById("phoneInput");
+
+
 function renderCart() {
     cartContainer.innerHTML = "";
 
@@ -120,3 +125,21 @@ deliveryMethod.addEventListener("change", () => {
     updateSummary();
 });
 
+// send information to checkout page
+checkoutBtn.addEventListener("click", () => {
+    const orderInfo = {
+        method: deliveryMethod.value,
+        name: nameInput.value,
+        phone: phoneInput.value,
+        address: addressInput.value,
+        pickupTime: pickupTimeInput.value
+    };
+
+    localStorage.setItem("orderInfo", JSON.stringify(orderInfo));
+
+    window.location.href = "checkout.html";
+});
+
+// init
+updateRequiredField();
+updateSummary();

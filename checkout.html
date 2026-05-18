@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Cookies and More</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="checkout.js" defer></script>
+</head>
+<body>
+    <header>
+
+    <h1>Checkout</h1>
+
+    <nav>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="#">Offer</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    </nav>
+
+    </header>
+
+    <main class="content">
+    
+    <section class="top-bar">
+        <button class="back-btn">Go Back</button>
+    </section>
+    
+    <div class="two-col-layout">
+    
+    <section class="left-col">
+        <div class="line-1">
+            <div class="line"></div>
+        </div>
+
+        <h2>Summary</h2>
+
+        <div id="receiptItems"></div>
+
+        <div class="line-1">
+            <div class="line"></div>
+        </div>
+
+        <p>Name: <span id="receiptName"></span></p>
+        <p>Phone: <span id="receiptPhone"></span></p>
+        <p>Delivery Method: <span id="receiptMethod"></span></p>
+        <p>Pickup Time: <span id="receiptPickupTime"></span></p>
+        <p>Address: <span id="receiptAddress"></span></p>
+
+        <div class="line-1">
+            <div class="line"></div>
+        </div>
+
+        <p>Subtotal: <span id="receiptSubtotal"></span></p>
+        <p>Incl. GST: <span id="receiptGST"></span></p>
+        <p>Delivery Fee: <span id="receiptDeliveryFee"></span></p>
+        <h3>Total: <span id="receiptTotal"></span></h3>
+        
+
+    </section>
+    
+    <section class="right-col">
+        <div class="line-1">
+            <div class="line"></div>
+        </div>
+
+        <h2>Payment</h2>
+
+        <form class="pickup-form" id="paymentForm">
+        
+            <label>Card Number</label>
+            <input type="text" required>
+
+            <label>Expiry Date</label>
+            <input type="text" required>
+
+            <label>CVV</label>
+            <input type="text" required>
+
+            <button class="checkout-btn" type="submit">Pay Now!</button>
+
+        </form>
+
+    </section>
+    </div>
+    
+    </main>
+
+    <footer>
+    <section class="shop">
+        <p>Factory Shop: 2/321 Victoria Rd, Malaga WA 6090</p>
+        <p>Hours: 10:00 - 17:00 Mon to Fri<br>
+            <span class="indent">10:00 - 16:00 Sat to Sun</span></p>
+    </section>
+
+    <section class="office">
+        <p>Office: 5 Dyer Rd, Bassendean WA 6054</p>
+        <p>Tel: 08 6278 3700</p>
+
+    </section>
+    </footer>
+</body>
+</html>

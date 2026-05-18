@@ -486,14 +486,14 @@ footer p {
   line-height: 1.5;
 }
 
-.cart-layout {
+.two-col-layout {
     display: flex;
     flex-direction: row;
     gap: 32px;
     padding: 0px;
 }
 
-.cart-left, .cart-right {
+.left-col, .right-col {
     flex: 1;
     height: calc(100vh - 120px);
     overflow-y: auto;

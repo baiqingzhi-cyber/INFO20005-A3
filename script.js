@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 const modalOverlay = document.getElementById("modalOverlay");
 const modalCloseBtn = document.getElementById("modalCloseBtn");
 

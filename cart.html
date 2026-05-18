@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart - Pick Up - Cookies and More</title>
+    <title>Cart - Cookies and More</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -31,9 +31,9 @@
         <button class="back-btn">Go Back</button>
     </section>
     
-    <div class="cart-layout">
+    <div class="two-col-layout">
     
-    <section class="cart-left">
+    <section class="left-col">
         <div class="line-1">
             <div class="line"></div>
         </div>
@@ -42,11 +42,11 @@
 
         <div id="cartContainer"></div>
 
-        <br>
+       
 
     </section>
     
-    <section class="cart-right">
+    <section class="right-col">
         <div class="line-1">
             <div class="line"></div>
         </div>
@@ -61,10 +61,10 @@
             </select>
 
             <label>Name</label>
-            <input type="text" required>
+            <input type="text" id="nameInput" required>
 
             <label>Phone</label>
-            <input type="text" required>
+            <input type="text" id="phoneInput" required>
 
             <label>Address</label>
             <input type="text" id="addressInput">
