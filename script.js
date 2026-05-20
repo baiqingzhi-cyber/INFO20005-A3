@@ -9,7 +9,12 @@ const modalDesc = document.getElementById("modalDesc");
 const modalAllergens = document.getElementById("modalAllergens");
 const modalStorage = document.getElementById("modalStorage");
 
+let currentCard = null;
+
 function openModal (card) {
+
+    currentCard = card;
+
     const img = card.querySelector("img").src;
     const title = card.querySelector(".product-name").textContent;
     const price = card.querySelector(".price").textContent;
@@ -103,7 +108,7 @@ document.addEventListener("click", (e) => {
 
   if (addBtn) {
     e.stopPropagation();
-    const card = addBtn.closest(".product-card");
-    addToCart(card);
+    if (!currentCard) return;
+    addToCart(currentCard);
   }
 });
