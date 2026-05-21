@@ -112,3 +112,12 @@ document.addEventListener("click", (e) => {
     addToCart(currentCard);
   }
 });
+
+document.querySelector(".back-btn").addEventListener("click", () => {
+    if (history.length > 1) {
+        history.back();
+    } else {
+        window.location.href = "home.html";
+    }
+});
+

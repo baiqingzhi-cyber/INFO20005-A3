@@ -140,6 +140,14 @@ checkoutBtn.addEventListener("click", () => {
     window.location.href = "checkout.html";
 });
 
+document.querySelector(".back-btn").addEventListener("click", () => {
+    if (history.length > 1) {
+        history.back();
+    } else {
+        window.location.href = "home.html";
+    }
+});
+
 // init
 updateRequiredField();
 updateSummary();
