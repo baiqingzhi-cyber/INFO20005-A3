@@ -7,6 +7,7 @@ const deliveryFeeEl = document.getElementById("deliveryFee");
 const finalTotalEl = document.getElementById("finalTotal");
 const deliveryMethod = document.getElementById("deliveryMethod");
 const addressInput = document.getElementById("addressInput");
+const addressLabel = document.getElementById("addressLabel");
 const pickupTimeInput = document.getElementById("pickupTimeInput");
 
 const checkoutBtn = document.querySelector(".checkout-btn");
@@ -113,10 +114,12 @@ function updateRequiredField() {
         pickupTimeInput.required = true;
         addressInput.required = false;
         addressInput.value = "";
+        addressLabel.textContent = `Address (Optional)`
     } else {
         pickupTimeInput.required = false;
         addressInput.required = true;
         addressInput.value = "";
+        addressLabel.textContent = `Address (Required)`
     }
 }
 

@@ -6,7 +6,8 @@
 
 body {
   margin: 0;
-  padding-top: 120px;
+  padding-top: 120px; /* space for the top bar */
+  width: 100%;
   background-color: var(--bg);
 }
 
@@ -32,7 +33,7 @@ section {
 
 h1{
     font-family: var(--font-main);
-    font-size: 52px;
+    font-size: 56px;
 }
 
 h2{
@@ -64,6 +65,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 9999; /* layer position */
 }
 
 header h1{
@@ -73,9 +75,6 @@ header h1{
 
     margin-left: 5vw;
 }
-
-
-
 
 header a{
     color: white;
@@ -122,9 +121,12 @@ header li {
 
 .slogan{
     position: absolute;
-    top: 40px;
+    bottom: 40px;
     right: 64px;
     height: auto;
+    width: auto;
+
+    padding: 24px;
 
     display: flex;
     flex-direction: column;
@@ -132,49 +134,19 @@ header li {
     align-items: flex-end;
     gap: 24px;
 
+    background-color: var(--card);
+    border: 2px var(--primary) solid;
+    border-radius: 10px;
 }
 
 .slogan h3 { 
-    color: var(--bg);
-    -webkit-text-stroke: 1px var(--text);
-}
-
-.hero-button {
-    position: absolute;
-    bottom: 40px;
-    right: 64px;
-    height: auto;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    gap: 32px;
-
-}
-
-.hero-button a{
-    width: 240px;
-    height: 80px;
-
-    background-color: var(--card);
-
-    font-family: var(--font-main);
-    font-size: var(--h2);
     color: var(--text);
-
-    text-decoration: none;
-    border: 1px solid var(--primary);
-    border-radius: 10px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
 footer {
     height: 150px;
+    width: 100%;
     background-color: var(--primary);
 
     padding: 24px 64px;
@@ -368,6 +340,7 @@ footer p {
 
 .product-name:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .price-spec {
@@ -381,13 +354,24 @@ footer p {
     width: 120px;
     height: 40px;
 
-    background-color: var(--accent);
-    border: 1px var(--primary) solid;
-    border-radius: 20px;
-
+    background-color: var(--primary);
+    
     font-family: var(--font-text);
     font-size: var(--p);
+    color: var(--bg);
+
+    border: none;
+    border-radius: 20px;
+}
+
+.add-btn:hover {
+    background-color: var(--accent);
     color: var(--text);
+
+    border: 2px var(--primary) solid;
+    border-radius: 20px;
+
+    cursor: pointer;
 }
 
 
@@ -640,6 +624,11 @@ footer p {
 
     border: 0;
     border-radius: 10px;
+}
+
+.receipt-items , .receipt-price , .receipt-info{
+    padding: 16px 0px;
+    line-height: 1.5;
 }
 
 .personal-detail {
