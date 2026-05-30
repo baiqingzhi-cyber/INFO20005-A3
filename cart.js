@@ -10,9 +10,9 @@ const addressInput = document.getElementById("addressInput");
 const addressLabel = document.getElementById("addressLabel");
 const pickupTimeInput = document.getElementById("pickupTimeInput");
 
-const checkoutBtn = document.querySelector(".checkout-btn");
 const nameInput = document.getElementById("nameInput");
 const phoneInput = document.getElementById("phoneInput");
+const form = document.getElementById("pickupForm");
 
 
 function renderCart() {
@@ -129,7 +129,9 @@ deliveryMethod.addEventListener("change", () => {
 });
 
 // send information to checkout page
-checkoutBtn.addEventListener("click", () => {
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
     const orderInfo = {
         method: deliveryMethod.value,
         name: nameInput.value,
@@ -139,7 +141,6 @@ checkoutBtn.addEventListener("click", () => {
     };
 
     localStorage.setItem("orderInfo", JSON.stringify(orderInfo));
-
     window.location.href = "checkout.html";
 });
 

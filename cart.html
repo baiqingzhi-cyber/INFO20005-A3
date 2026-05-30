@@ -24,7 +24,7 @@
 
     </header>
 
-    <main class="content" style="margin-bottom: 150px;">
+    <main class="content">
     
     <section class="top-bar">
         <button class="back-btn">Go Back</button>
@@ -32,63 +32,71 @@
     
     <div class="two-col-layout">
     
-    <section class="left-col">
-        <div class="line-1">
-            <div class="line"></div>
-        </div>
+        <section class="left-col">
+            <div class="line-1">
+                <div class="line"></div>
+            </div>
 
-        <h2>Cart</h2>
+            <h2>Cart</h2>
 
-        <div id="cartContainer"></div>
+            <div id="cartContainer" class="cart-list"></div>
 
-       
+            <div class="line-1">
+                <div class="line"></div>
+            </div>
 
-    </section>
-    
-    <section class="right-col">
-        <div class="line-1">
-            <div class="line"></div>
-        </div>
+            <div class="cart-summary">
+                <h3>Subtotal: <span id="subtotal">$0.00</span></h3>
+                <p>Incl. GST: <span id="gst">$0.00</span></p>
+                <h3>Delivery Fee: <span id="deliveryFee">$0.00</span></h3>
+                <h2>Total: <span id="finalTotal">$0.00</span></h2>
+            </div>
+        
+        </section>
+        
+        <section class="right-col">
+            <div class="line-1">
+                <div class="line"></div>
+            </div>
 
-        <h2>Information</h2>
+            <h2>Information</h2>
 
-        <form class="pickup-form">
-            <label>Delivery Method</label>
-            <select id="deliveryMethod" required>
-                <option value="pickup">Pickup</option>
-                <option value="delivery">Delivery</option>
-            </select>
+            <form class="pickup-form" id="pickupForm">
+                <label>Delivery Method</label>
+                <select id="deliveryMethod" required>
+                    <option value="pickup">Pickup</option>
+                    <option value="delivery">Delivery</option>
+                </select>
 
-            <label>Name</label>
-            <input type="text" id="nameInput" required>
+                <label>Name</label>
+                <input type="text" id="nameInput" required>
 
-            <label>Phone</label>
-            <input type="text" id="phoneInput" required>
+                <label>Phone</label>
+                <input type="text" id="phoneInput" required>
 
-            <label id="addressLabel"></label>
-            <input type="text" id="addressInput">
+                <label id="addressLabel"></label>
+                <input type="text" id="addressInput">
 
-            <label>Pickup Time</label>
-            <input type="datetime-local" id="pickupTimeInput">
-        </form>
+                <label>Pickup Time</label>
+                <input type="datetime-local" id="pickupTimeInput">
 
-    </section>
+                <button class="checkout-btn" type="submit">Checkout</button>
+            </form>
+        </section>
     </div>
-    
     </main>
 
-    <footer class="checkout">
-        <div class="cart-summary">
-            <h3>Subtotal: <span id="subtotal">$0.00</span></h3>
-            <p>Incl. GST: <span id="gst">$0.00</span></p>
-            <h3>Delivery Fee: <span id="deliveryFee">$0.00</span></h3>
-        </div>
+    <footer>
+    <section class="shop">
+        <p>Factory Shop: 2/321 Victoria Rd, Malaga WA 6090</p>
+        <p>Hours: 10:00 - 17:00 Mon to Fri<br>
+            <span class="indent">10:00 - 16:00 Sat to Sun</span></p>
+    </section>
 
-        <div class="checkout-area">
-            <h2>Total: <span id="finalTotal">$0.00</span></h2>
-            <button class="checkout-btn">Checkout</button>
-        </div>
-    
+    <section class="office">
+        <p>Office: 5 Dyer Rd, Bassendean WA 6054</p>
+        <p>Tel: 08 6278 3700</p>
+
     </section>
     </footer>
 </body>

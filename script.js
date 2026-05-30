@@ -9,6 +9,8 @@ const modalDesc = document.getElementById("modalDesc");
 const modalAllergens = document.getElementById("modalAllergens");
 const modalStorage = document.getElementById("modalStorage");
 
+const enquiryForm = document.getElementById("enquiryForm");
+
 let currentCard = null;
 
 function openModal (card) {
@@ -104,13 +106,34 @@ function addToCart(card) {
 }
 
 document.addEventListener("click", (e) => {
-  const addBtn = e.target.closest(".add-btn");
+    // add-buttons in product card
+    const addBtn = e.target.closest(".add-btn");
 
-  if (addBtn) {
-    e.stopPropagation();
-    if (!currentCard) return;
-    addToCart(currentCard);
-  }
+    if (addBtn) {
+        e.stopPropagation();
+        
+        const card = addBtn.closest(".product-card");
+
+        if (card) {
+            addToCart(card);
+            alert("Added to cart successfully!");
+        }
+        return;
+    }
+
+    // add-buttons in product details page
+    const modalBtn = e.target.closest(".modal-add-btn");
+
+    if (modalBtn) {
+        e.stopPropagation();
+
+        if (currentCard) {
+            addToCart(currentCard);
+            alert("Added to cart successfully!");
+        }
+        return;
+    }
+  
 });
 
 document.querySelector(".back-btn").addEventListener("click", () => {
@@ -121,3 +144,8 @@ document.querySelector(".back-btn").addEventListener("click", () => {
     }
 });
 
+enquiryForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Submitted! (Demo)");
+    window.location.href = "home.html";
+});
