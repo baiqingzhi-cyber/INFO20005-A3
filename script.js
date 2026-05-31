@@ -11,6 +11,9 @@ const modalStorage = document.getElementById("modalStorage");
 
 const enquiryForm = document.getElementById("enquiryForm");
 
+const searchInput = document.getElementById("searchInput");
+const searchForm = document.getElementById("searchForm");
+
 let currentCard = null;
 
 function openModal (card) {
@@ -144,8 +147,21 @@ document.querySelector(".back-btn").addEventListener("click", () => {
     }
 });
 
-enquiryForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    alert("Submitted! (Demo)");
-    window.location.href = "home.html";
-});
+if (enquiryForm) {
+    enquiryForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Submitted! (Demo)");
+        window.location.href = "home.html";
+    });
+}
+
+if (searchForm) {
+    searchForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const search = searchInput.value.trim();
+
+        localStorage.setItem("search", search);
+        window.location.href = "search.html";
+    });
+}

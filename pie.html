@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="products.js" defer></script>
+    <script src="category.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -29,9 +31,11 @@
 
     
     <section class="top-bar">
-    <button class="back-btn">Go Back</button>
-    <input class="search-input" type="text" placeholder="Search..." />
-    <button class="search-btn">Search</button>
+        <button class="back-btn">Go Back</button>
+        <form class="search-form">
+            <input class="search-input" type="text" placeholder="Search..." />
+            <button class="search-btn" type="submit">Search</button>
+        </form>
     </section>
 
     <div class="line-1">
@@ -41,127 +45,11 @@
 
     <section class="bread">
     
-    <div class="product-list">
-    
-        <article class="product-card"
-            data-desc="Warm apple filling with cinnamon and a crunchy crumble topping."
-            data-allergens="Contains wheat (gluten), dairy (milk), eggs. May contain traces of nuts."
-            data-storage="Store at room temperature for up to 1 day. Refrigerate up to 4 days."
-        >
-            <div class="product-img">
-                <img src="image/apple cinnamon crumble pie.jpg" alt="apple cinnamon crumble pie" />
-            </div>
-            <div class="product-info">
-                <h3 class="product-name">Apple Cinnamon Crumble Pie</h3>
-                <div class="price-spec">
-                    <p class="price">$22.00</p>
-                    <p>/</p>
-                    <p class="spec">750g</p>
-                </div>
-                <button class="add-btn">Add to cart</button>
-            </div>              
-        </article>
-
-
-        <article class="product-card"
-            data-desc="Sweet and tangy blueberry filling wrapped in a buttery crust."
-            data-allergens="Wheat (gluten), dairy"
-            data-storage="Refrigerate and consume within 4 days."
-        >
-            <div class="product-img">
-                <img src="image/Blueberry Pie.jpg" alt="Blueberry Pie" />
-            </div>
-            <div class="product-info">
-                <h3 class="product-name">Blueberry Pie</h3>
-                <div class="price-spec">
-                    <p class="price">$23.50</p>
-                    <p>/</p>
-                    <p class="spec">720g</p>
-                </div>
-                <button class="add-btn">Add to cart</button>
-            </div>
-        </article>
-
-
-        <article class="product-card"
-            data-desc="Zesty lemon custard topped with fluffy toasted meringue."
-            data-allergens="Wheat (gluten), dairy, eggs"
-            data-storage="Refrigerate and consume within 3 days."
-        >
-            <div class="product-img">
-                <img src="image/Lemon Meringue Pie.jpeg" alt="Lemon Meringue Pie" />
-            </div>
-            <div class="product-info">
-                <h3 class="product-name">Lemon Meringue Pie</h3>
-                <div class="price-spec">
-                    <p class="price">$24.50</p>
-                    <p>/</p>
-                    <p class="spec">680g</p>
-                </div>
-                <button class="add-btn">Add to cart</button>
-            </div>
-        </article>
-
-
-        <article class="product-card"
-            data-desc="Sweet caramel-like filling loaded with crunchy pecans."
-            data-allergens="Wheat (gluten), dairy, eggs, tree nuts (pecans)"
-            data-storage="Refrigerate and consume within 5 days."
-        >
-            <div class="product-img">
-                <img src="image/Pecan Pie.jpg" alt="Pecan Pie" />
-            </div>
-            <div class="product-info">
-                <h3 class="product-name">Pecan Pie</h3>
-                <div class="price-spec">
-                    <p class="price">$26.00</p>
-                    <p>/</p>
-                    <p class="spec">700g</p>
-                </div>
-                <button class="add-btn">Add to cart</button>
-            </div>
-        </article>
-
-        <article class="product-card"
-            data-desc="Creamy pumpkin filling baked with warm seasonal spices."
-            data-allergens="Wheat (gluten), dairy, eggs"
-            data-storage="Refrigerate and consume within 4 days."
-        >
-            <div class="product-img">
-                <img src="image/Pumpkin Pie.jpg" alt="Pumpkin Pie" />
-            </div>
-            <div class="product-info">
-                <h3 class="product-name">Pumpkin Pie</h3>
-                <div class="price-spec">
-                    <p class="price">$23.80</p>
-                    <p>/</p>
-                    <p class="spec">750g</p>
-                </div>
-                <button class="add-btn">Add to cart</button>
-            </div>
-        </article>
-
-        <article class="product-card"
-            data-desc="Smooth egg custard baked in a buttery flaky pastry base."
-            data-allergens="Wheat (gluten), dairy, eggs"
-            data-storage="Refrigerate and consume within 3 days; best served slightly warmed."
-        >
-            <div class="product-img">
-                <img src="image/Egg Custard Pie.jpg" alt="Egg Custard Pie" />
-            </div>
-            <div class="product-info">
-                <h3 class="product-name">Egg Custard Pie</h3>
-                <div class="price-spec">
-                    <p class="price">$21.90</p>
-                    <p>/</p>
-                    <p class="spec">680g</p>
-                </div>
-                <button class="add-btn">Add to cart</button>
-            </div>
-        </article>
-    
-    
-    </div>
+    <div
+        class="product-list"
+        id="productList"
+        data-category="pie"
+    ></div>
     
     </section>
 
